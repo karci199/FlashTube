@@ -1,0 +1,15 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Editor and OS
+.vs/
+.vscode/
+.idea/
+*.user
+Thumbs.db
+
+# Leftovers of the archived Avalonia app (tag arsiv/avalonia)
+bin/
+obj/
+mock-data/

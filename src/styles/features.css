@@ -1,0 +1,30 @@
+/*
+ * CSS part of the features. Every rule is scoped by a class on <html> (html.ft-*), so a feature
+ * that is off costs nothing, and one that is on applies before YouTube paints.
+ * Selectors target YouTube's custom elements and attributes, not its generated class names,
+ * because those change far less often.
+ */
+
+/* === Hide Shorts ======================================================== */
+
+/* Shelves on home, subscriptions and search */
+html.ft-hide-shorts ytd-rich-shelf-renderer[is-shorts],
+html.ft-hide-shorts ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts]),
+html.ft-hide-shorts ytd-reel-shelf-renderer,
+html.ft-hide-shorts grid-shelf-view-model:has(a[href^="/shorts/"]),
+/* Single Shorts in grids, lists and search results.
+   Never hide a container like ytd-item-section-renderer: on search it holds ALL the results. */
+html.ft-hide-shorts ytd-rich-item-renderer:has(a[href^="/shorts/"]),
+html.ft-hide-shorts ytd-rich-item-renderer:has(ytm-shorts-lockup-view-model),
+html.ft-hide-shorts ytm-shorts-lockup-view-model-v2,
+html.ft-hide-shorts ytd-video-renderer:has(a[href^="/shorts/"]),
+html.ft-hide-shorts ytd-grid-video-renderer:has(a[href^="/shorts/"]),
+html.ft-hide-shorts ytd-compact-video-renderer:has(a[href^="/shorts/"]),
+/* Side menu and mini menu entries */
+html.ft-hide-shorts ytd-guide-entry-renderer:has(a[href="/shorts"]),
+html.ft-hide-shorts ytd-guide-entry-renderer:has(a[title="Shorts"]),
+html.ft-hide-shorts ytd-mini-guide-entry-renderer[aria-label="Shorts"],
+/* "Shorts" filter chip on search results */
+html.ft-hide-shorts yt-chip-cloud-chip-renderer:has(yt-formatted-string[title="Shorts"]) {
+  display: none !important;
+}

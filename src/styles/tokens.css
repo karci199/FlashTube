@@ -1,0 +1,74 @@
+/*
+ * DesignKit tokens as CSS custom properties: the same keys and values as DesignKit.Wpf /
+ * DesignKit.Avalonia (WinUI 3 Fluent). Dark is canonical; light follows the system setting.
+ * Used by the extension's own surfaces (popup, panels), never injected into YouTube's page.
+ */
+
+:root {
+  color-scheme: dark light;
+
+  /* Spacing */
+  --spacing-xxs: 2px;
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-m: 12px;
+  --spacing-l: 16px;
+  --spacing-xl: 20px;
+  --spacing-xxl: 24px;
+  --control-corner-radius: 4px;
+  --overlay-corner-radius: 8px;
+  --control-height: 32px;
+
+  /* Type */
+  --font-body: "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+  --font-size-caption: 12px;
+  --font-size-body: 14px;
+  --font-size-body-large: 18px;
+  --font-size-subtitle: 20px;
+
+  /* Colours: dark */
+  --surface-base: #202020;
+  --surface-alt: #1c1c1c;
+  --surface-tertiary: #282828;
+  --layer: rgba(255, 255, 255, 0.05);
+  --control: rgba(255, 255, 255, 0.06);
+  --control-alt: rgba(255, 255, 255, 0.08);
+  --hover: rgba(255, 255, 255, 0.06);
+  --stroke: rgba(255, 255, 255, 0.07);
+  --stroke-strong: rgba(255, 255, 255, 0.55);
+  --divider: rgba(255, 255, 255, 0.08);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.77);
+  --text-tertiary: rgba(255, 255, 255, 0.53);
+  --accent: #76b9ed;
+  --accent-text: #a6d8ff;
+  --on-accent: #000000;
+  --success: #5ea355;
+  --warning: #fce100;
+  --danger: #ff99a4;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --surface-base: #f3f3f3;
+    --surface-alt: #eeeeee;
+    --surface-tertiary: #f9f9f9;
+    --layer: rgba(255, 255, 255, 0.7);
+    --control: rgba(255, 255, 255, 0.7);
+    --control-alt: rgba(249, 249, 249, 0.5);
+    --hover: rgba(0, 0, 0, 0.035);
+    --stroke: rgba(0, 0, 0, 0.06);
+    --stroke-strong: rgba(0, 0, 0, 0.45);
+    --divider: rgba(0, 0, 0, 0.06);
+    --text-primary: rgba(0, 0, 0, 0.89);
+    --text-secondary: rgba(0, 0, 0, 0.62);
+    --text-tertiary: rgba(0, 0, 0, 0.45);
+    --accent: #005eb7;
+    --accent-text: #003e92;
+    --on-accent: #ffffff;
+    --success: #0f7b0f;
+    --warning: #9d5d00;
+    --danger: #c42b1c;
+  }
+}

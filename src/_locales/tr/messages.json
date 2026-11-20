@@ -1,0 +1,6 @@
+{
+  "appName": { "message": "FlashTube" },
+  "appDescription": { "message": "YouTube için hızlı ve özelleştirilebilir bir katman." },
+  "hideShortsLabel": { "message": "Shorts'u gizle" },
+  "hideShortsHint": { "message": "Ana sayfa, arama, abonelikler ve yan menü" }
+}

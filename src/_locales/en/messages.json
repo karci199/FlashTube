@@ -1,0 +1,6 @@
+{
+  "appName": { "message": "FlashTube" },
+  "appDescription": { "message": "A fast, customizable layer over YouTube." },
+  "hideShortsLabel": { "message": "Hide Shorts" },
+  "hideShortsHint": { "message": "Home, search, subscriptions and the side menu" }
+}
