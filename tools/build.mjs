@@ -15,6 +15,7 @@ const watch = process.argv.includes("--watch");
 /** Static files copied as they are: [from (in src), to (in dist)]. */
 const staticFiles = [
   ["popup/popup.html", "popup.html"],
+  ["options/options.html", "options.html"],
   ["_locales/en/messages.json", "_locales/en/messages.json"],
   ["_locales/tr/messages.json", "_locales/tr/messages.json"],
 ];
@@ -22,7 +23,8 @@ const staticFiles = [
 /** CSS files concatenated, in order, into one stylesheet per target. */
 const stylesheets = {
   "content.css": ["styles/features.css"],
-  "popup.css": ["styles/tokens.css", "popup/popup.css"],
+  "popup.css": ["styles/tokens.css", "styles/ui.css", "popup/popup.css"],
+  "options.css": ["styles/tokens.css", "styles/ui.css", "options/options.css"],
 };
 
 async function copyStatic() {
@@ -48,7 +50,10 @@ const ctx = await context({
   entryPoints: {
     content: join(src, "content/main.ts"),
     popup: join(src, "popup/popup.ts"),
+    options: join(src, "options/options.ts"),
   },
+  // Icons are imported as SVG text (src/ui/icons.ts); only the imported ones are bundled.
+  loader: { ".svg": "text" },
   outdir: dist,
   bundle: true,
   format: "iife",

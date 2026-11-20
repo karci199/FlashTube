@@ -7,12 +7,14 @@
   "scripts": {
     "build": "node tools/build.mjs",
     "watch": "node tools/build.mjs --watch",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tests",
     "test": "vitest run",
-    "check": "tsc --noEmit && vitest run && node tools/build.mjs"
+    "check": "npm run typecheck && vitest run && node tools/build.mjs"
   },
   "devDependencies": {
+    "@tabler/icons": "3.52.0",
     "@types/chrome": "0.3.7",
+    "@types/node": "26.6.6",
     "esbuild": "0.28.2",
     "typescript": "7.0.2",
     "vitest": "5.1.1"

@@ -28,10 +28,11 @@ export interface Feature {
   isEnabled(settings: Settings): boolean;
 
   /**
-   * The JS part, if any. Called at start and after every settings change, with the new settings.
-   * It must be idempotent and undo itself when the feature is turned off.
+   * The JS part, if any. Called at start and after every settings change. `active` already
+   * accounts for the master switch: when false the feature must undo whatever it did.
+   * It must be idempotent.
    */
-  apply?(settings: Settings, context: FeatureContext): void;
+  apply?(settings: Settings, context: FeatureContext, active: boolean): void;
 }
 
 /** The <html> classes the enabled features ask for, in registry order. */

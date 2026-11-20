@@ -1,6 +1,40 @@
 {
   "appName": { "message": "FlashTube" },
   "appDescription": { "message": "A fast, customizable layer over YouTube." },
+
+  "masterSwitch": { "message": "Turn FlashTube on or off" },
+  "statusOn": { "message": "On for YouTube" },
+  "statusOff": { "message": "Off: YouTube is unchanged" },
+  "allSettings": { "message": "All settings" },
+  "presetsTitle": { "message": "Presets" },
+
+  "presetFocus": { "message": "Focus" },
+  "presetCinema": { "message": "Cinema" },
+  "presetClean": { "message": "Clean" },
+  "presetDefault": { "message": "Default" },
+
+  "groupGeneral": { "message": "General" },
+  "groupYouTube": { "message": "YouTube sections" },
+  "groupOther": { "message": "Other" },
+
+  "sectionAppearance": { "message": "Appearance" },
+  "sectionSideMenu": { "message": "Side menu" },
+  "sectionHome": { "message": "Home" },
+  "sectionExplore": { "message": "Explore" },
+  "sectionSubscriptions": { "message": "Subscriptions" },
+  "sectionTrending": { "message": "Trending" },
+  "sectionWatch": { "message": "Watch page" },
+  "sectionShortcuts": { "message": "Shortcuts" },
+  "sectionStatistics": { "message": "Statistics" },
+  "sectionBackup": { "message": "Backup" },
+
+  "searchPlaceholder": { "message": "Search settings: Shorts, speed, comments" },
+  "searchResults": { "message": "Search results" },
+  "noResultsTitle": { "message": "No matching setting" },
+  "noResultsBody": { "message": "Try another word." },
+  "comingSoonTitle": { "message": "Coming soon" },
+  "comingSoonBody": { "message": "Settings for this section are on the way." },
+
   "hideShortsLabel": { "message": "Hide Shorts" },
   "hideShortsHint": { "message": "Home, search, subscriptions and the side menu" }
 }

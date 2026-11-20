@@ -2,15 +2,26 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <!-- Bare settings surface: proves the settings round trip. The real UI is designed later. -->
-  <header class="header">
-    <span class="logo" aria-hidden="true">▶</span>
-    <span class="title" data-i18n="appName"></span>
-  </header>
-  <main id="settings" class="settings"></main>
+  <div id="app" class="popup">
+    <header class="popup-header">
+      <span class="logo" id="logo"></span>
+      <span class="popup-title" data-i18n="appName"></span>
+      <span id="master"></span>
+    </header>
+    <section class="popup-presets dims">
+      <div class="caption" data-i18n="presetsTitle"></div>
+      <div class="chips" id="presets"></div>
+    </section>
+    <section class="popup-switches dims" id="switches"></section>
+    <footer class="popup-footer">
+      <span class="caption" id="status"></span>
+      <button type="button" class="link" id="open-options"></button>
+    </footer>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>

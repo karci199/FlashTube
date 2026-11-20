@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>FlashTube</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div id="app" class="options">
+    <nav class="nav">
+      <div class="nav-brand">
+        <span class="logo" id="logo"></span>
+        <span class="nav-title" data-i18n="appName"></span>
+        <span id="master"></span>
+      </div>
+      <div id="nav-groups" class="dims"></div>
+    </nav>
+    <main class="content dims">
+      <div class="search">
+        <span class="search-icon" id="search-icon"></span>
+        <input type="search" id="search" data-i18n-placeholder="searchPlaceholder" autocomplete="off" spellcheck="false">
+      </div>
+      <header class="section-header" id="section-header"></header>
+      <div class="list" id="list"></div>
+    </main>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

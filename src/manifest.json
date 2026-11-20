@@ -15,6 +15,10 @@
       "all_frames": false
     }
   ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
   "action": {
     "default_title": "FlashTube",
     "default_popup": "popup.html"

@@ -1,0 +1,161 @@
+/* Components shared by the popup and the options page. DesignKit tokens only (tokens.css). */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--surface-base);
+  color: var(--text-primary);
+  font: var(--font-size-body) / 20px var(--font-body);
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+.icon {
+  flex: none;
+  stroke-width: 1.75;
+}
+
+/* Settings row: texts on the left, control on the right */
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-m);
+  min-height: 44px;
+  padding: var(--spacing-s) var(--spacing-m);
+  border-radius: var(--control-corner-radius);
+  cursor: pointer;
+}
+
+.row:hover {
+  background: var(--hover);
+}
+
+.row-texts {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.row-hint {
+  color: var(--text-secondary);
+  font-size: var(--font-size-caption);
+  line-height: 16px;
+}
+
+/* Fluent-style toggle switch from a checkbox */
+.switch {
+  appearance: none;
+  position: relative;
+  flex: none;
+  width: 40px;
+  height: 20px;
+  margin: 0;
+  border: 1px solid var(--stroke-strong);
+  border-radius: 10px;
+  background: var(--control);
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.switch::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--text-secondary);
+  transition: transform 120ms ease;
+}
+
+.switch:checked {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.switch:checked::after {
+  background: var(--on-accent);
+  transform: translateX(19px);
+}
+
+.switch:focus-visible,
+.chip:focus-visible,
+.link:focus-visible,
+.nav-item:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 2px;
+}
+
+/* Preset chips */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-s);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  height: 28px;
+  padding: 0 var(--spacing-m);
+  border: 1px solid var(--stroke-strong);
+  border-radius: 14px;
+  background: transparent;
+  font-size: var(--font-size-caption);
+  cursor: pointer;
+}
+
+.chip:hover {
+  background: var(--hover);
+}
+
+.chip-on {
+  border-color: var(--accent);
+  background: var(--accent-wash);
+  color: var(--accent-text);
+}
+
+.caption {
+  color: var(--text-tertiary);
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent-text);
+  font-size: var(--font-size-caption);
+  cursor: pointer;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 12px;
+}
+
+/* Everything below the master switch dims while FlashTube is off */
+.is-off .dims {
+  opacity: 0.45;
+  pointer-events: none;
+}

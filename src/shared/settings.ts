@@ -6,14 +6,21 @@
  * so an older or hand-edited store can never break the content script.
  */
 
-/** All settings. Add a key here and in DEFAULT_SETTINGS when a feature needs one. */
+/** All settings. Add a key here, in DEFAULT_SETTINGS and in the catalog when a feature needs one. */
 export interface Settings {
+  /** Master switch: when off, FlashTube changes nothing on YouTube. */
+  enabled: boolean;
+
   /** Hide Shorts everywhere: home, search, sidebar, subscriptions. */
   hideShorts: boolean;
 }
 
+/** Keys whose value is a boolean (shown as switches). */
+export type BooleanSettingKey = { [K in keyof Settings]: Settings[K] extends boolean ? K : never }[keyof Settings];
+
 /** Values used until the user changes something. */
 export const DEFAULT_SETTINGS: Readonly<Settings> = Object.freeze({
+  enabled: true,
   hideShorts: false,
 });
 

@@ -1,6 +1,40 @@
 {
   "appName": { "message": "FlashTube" },
   "appDescription": { "message": "YouTube için hızlı ve özelleştirilebilir bir katman." },
+
+  "masterSwitch": { "message": "FlashTube'u aç veya kapat" },
+  "statusOn": { "message": "YouTube'da açık" },
+  "statusOff": { "message": "Kapalı: YouTube değişmeden" },
+  "allSettings": { "message": "Tüm ayarlar" },
+  "presetsTitle": { "message": "Hazır ayarlar" },
+
+  "presetFocus": { "message": "Odak" },
+  "presetCinema": { "message": "Sinema" },
+  "presetClean": { "message": "Temiz" },
+  "presetDefault": { "message": "Varsayılan" },
+
+  "groupGeneral": { "message": "Genel" },
+  "groupYouTube": { "message": "YouTube bölümleri" },
+  "groupOther": { "message": "Diğer" },
+
+  "sectionAppearance": { "message": "Görünüm" },
+  "sectionSideMenu": { "message": "Yan menü" },
+  "sectionHome": { "message": "Ana sayfa" },
+  "sectionExplore": { "message": "Keşfet" },
+  "sectionSubscriptions": { "message": "Abonelikler" },
+  "sectionTrending": { "message": "Trendler" },
+  "sectionWatch": { "message": "İzleme sayfası" },
+  "sectionShortcuts": { "message": "Kısayollar" },
+  "sectionStatistics": { "message": "İstatistik" },
+  "sectionBackup": { "message": "Yedekle" },
+
+  "searchPlaceholder": { "message": "Ayar ara: Shorts, hız, yorum" },
+  "searchResults": { "message": "Arama sonuçları" },
+  "noResultsTitle": { "message": "Eşleşen ayar yok" },
+  "noResultsBody": { "message": "Başka bir kelime deneyin." },
+  "comingSoonTitle": { "message": "Yakında" },
+  "comingSoonBody": { "message": "Bu bölümün ayarları hazırlanıyor." },
+
   "hideShortsLabel": { "message": "Shorts'u gizle" },
   "hideShortsHint": { "message": "Ana sayfa, arama, abonelikler ve yan menü" }
 }

@@ -1,0 +1,163 @@
+/* Full settings page. Shared components are in ui.css. */
+
+body {
+  min-height: 100vh;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+  overflow-y: auto;
+  padding: var(--spacing-m) var(--spacing-s);
+  border-right: 1px solid var(--divider);
+  background: var(--surface-alt);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+  padding: var(--spacing-xs) var(--spacing-s) var(--spacing-m);
+}
+
+.nav-title {
+  flex: 1;
+  font-weight: 600;
+}
+
+.nav-group {
+  padding: var(--spacing-m) var(--spacing-m) var(--spacing-xs);
+  color: var(--text-tertiary);
+  font-size: 11px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-m);
+  height: 36px;
+  padding: 0 var(--spacing-m);
+  border-radius: var(--control-corner-radius);
+  color: var(--text-secondary);
+  font-size: var(--font-size-body);
+  text-decoration: none;
+}
+
+.nav-item > .icon {
+  font-size: 16px;
+}
+
+.nav-item:hover {
+  background: var(--hover);
+  color: var(--text-primary);
+}
+
+.nav-item-on {
+  position: relative;
+  background: var(--hover);
+  color: var(--text-primary);
+}
+
+/* Selection pill, as in WinUI NavigationView */
+.nav-item-on::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 10px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.content {
+  width: 100%;
+  max-width: 760px;
+  padding: var(--spacing-xxl) 32px;
+}
+
+.search {
+  position: relative;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.search-icon {
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  color: var(--text-tertiary);
+  font-size: 16px;
+}
+
+.search input {
+  width: 100%;
+  height: var(--control-height);
+  padding: 0 var(--spacing-m) 0 38px;
+  border: 1px solid var(--stroke);
+  border-bottom-color: var(--stroke-strong);
+  border-radius: var(--control-corner-radius);
+  background: var(--control);
+  outline: none;
+}
+
+.search input:focus {
+  border-bottom: 2px solid var(--accent);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-m);
+  margin-bottom: var(--spacing-l);
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.section-title > .icon {
+  color: var(--accent-text);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.list > .row {
+  border: 1px solid var(--stroke);
+  background: var(--layer);
+}
+
+.row-section {
+  color: var(--accent-text);
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.empty {
+  padding: 48px var(--spacing-l);
+  border: 1px dashed var(--stroke-strong);
+  border-radius: var(--overlay-corner-radius);
+  text-align: center;
+}
+
+.empty-title {
+  font-size: var(--font-size-body-large);
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.empty-body {
+  margin-top: var(--spacing-xs);
+  color: var(--text-secondary);
+}
